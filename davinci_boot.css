@@ -1,0 +1,52 @@
+h1, h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 50px;
+}
+
+.jumbotron {
+    color: white;
+    background-color: black;
+}
+
+/*
+*   CSS Selector Reference
+*   https://www.w3schools.com/cssref/css_selectors.asp
+*
+*   elemento "img" (imagem) dentro de elemento ("div") da classe jumbotron 
+*/
+
+.jumbotron img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+body {
+    color: black;
+    background-color: gray;
+}
+
+/* elementos com a id "botao"*/
+
+/*
+#botao {
+    NÃO RESULTOU - para colocar o botão na parte de baixo do cartão
+    vertical-align: bottom !important;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+}
+*/
+
+/*
+*   Para resolver o problema da navegação com a Nav Bar com a classe "sticky-top" (sempre no topo da página) que esconde o início da secção para onde pretendemos navegar
+Href Jump with Bootstrap Sticky Navbar
+https://stackoverflow.com/questions/48593881/href-jump-with-bootstrap-sticky-navbar
+*/
+h2[id]:before {
+    display: block;
+    height: 56px;   /* equal to the header height */
+    margin-top: -56px;  /* negative margin equal to the header height */
+    visibility: hidden;
+    content: "";
+  }
